@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <p class="header-text">
+          ROCK <br />
+          PAPER <br />
+          SCISSORS
+        </p>
+        <div class="score">
+          <span>score</span>
+          <p class="score-num"></p>
+        </div>
+      </div>
+    </header>
+    <!-- <img src="./images/icon-close.svg" alt=""> -->
+    <!-- <img src="./images/image-rules.svg" alt=""> -->
+    <main>
+      <img id="tri" src="./images/bg-triangle.svg" alt="" />
+      <div class="items">
+        <div class="paper-container">
+          <div class="paper" onclick="handleChange(1)">
+            <img src="./images/icon-paper.svg" alt="" />
+          </div>
+        </div>
+        <div class="scissors-container">
+          <div class="scissors" onclick="handleChange(2)">
+            <img src="./images/icon-scissors.svg" alt="" />
+          </div>
+        </div>
+        <div class="rock-container">
+          <div class="rock" onclick="handleChange(3)">
+            <img src="./images/icon-rock.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="items2 filter">
+        <!-- <div class="item2container"> -->
+          <div class="ui-container">
+            <div class="user-choice">
+              <img id="user-img" src="" alt="" />
+            </div>
+            <p class="p-choice"> Your choice</p>
+          </div>
+          <div class="ui-container">
+            <p class="count"></p>
+            <div class="desktop-choice hidden">
+              <img id="pc-img" src="" alt="" />
+            </div>
+            <p class="p-choice"> Computer choice</p>
+          </div>
+          <div class="p-action hidden">
+            <p class="text-action"></p>
+            <button class="again">Play Again</button>
+            <button class="reset">Reset score</button>
+          </div>
+        <!-- </div> -->
+      </div>
+    </main>
+    <footer class="btn-container">
+      <button id="myBtn" class="btn-rules">Rules</button>
+    </footer>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="./images/image-rules.svg" alt="">
+      </div>
+    </div>
+    <script  src="./app/app.js" ></script>
+  </body>
+</html>
